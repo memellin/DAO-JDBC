@@ -30,14 +30,14 @@ public class Program {
 		        System.out.println(obj);
 		    }
 
-		  //tentar ordenar pelo id
+		 //tentar ordenar pelo id
 		System.out.println("=== TEST 3: seller findAll ==="); 
 		list = sellerDao.findAll();
 		
 		    for (Seller obj : list) {
 		        System.out.println(obj);
 		    }
-		    System.out.println("=======test 4============");
+		    System.out.println("=======test 4 insert============");
 		    Seller newSeller = new Seller(null, "enock", "enock@gmail.com", new Date(), 4000.0, department);
 		    sellerDao.insert(newSeller);
 		    System.out.println("Inserted! new id = " + newSeller.getId());
@@ -54,6 +54,5 @@ public class Program {
 		    sellerDao.deletebyId(id);
 		    System.out.println("Delete completed");
 		    sc.close();
-
 		}
 }
